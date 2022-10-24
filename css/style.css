@@ -9,11 +9,24 @@
   --title-second-color: #303030;
   --button-first-color: #ffffff;
   --button-second-color: #303030;
+  --specific-ident: 20px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
 }
 
 .page-body {
   font-family: "Open Sans", sans-serif;
   background-color: grey;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .visually-hidden {
@@ -35,6 +48,8 @@
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .button {
@@ -45,6 +60,10 @@
   text-transform: uppercase;
   cursor: pointer;
   font-family: inherit;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 50px;
 }
 
 .second-button:hover,
@@ -70,6 +89,10 @@
 }
 
 /* Header styles */
+
+.page-header {
+  padding: 32px 0;
+}
 
 .header-link {
   font-weight: 600;
@@ -103,8 +126,16 @@
   color: var(--accent-color);
 }
 
+.hero-description {
+  padding-top: 176px;
+  padding-left: 200px;
+  padding-right: 50px;
+  padding-bottom: 210px;
+}
+
 .hero .pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--specific-ident);
 }
 
 .hero .title {
@@ -112,6 +143,7 @@
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--title-first-color);
+  margin-bottom: var(--specific-ident);
 }
 
 .hero-text {
@@ -119,16 +151,23 @@
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /* About styles */
 
+.about {
+  padding: 120px 0;
+}
+
 .about .pre-title {
   color: var(--main-color);
+  margin-bottom: var(--specific-ident);
 }
 
 .about .title {
   color: var(--title-second-color);
+  margin-bottom: var(--specific-ident);
 }
 
 .about .after-title {
@@ -136,6 +175,7 @@
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: var(--second-color);
+  margin-bottom: var(--specific-ident);
 }
 
 .about-text {
@@ -143,6 +183,7 @@
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
   color: var(--second-color);
+  margin-bottom: 42px;
 }
 
 .about-button {
@@ -153,10 +194,21 @@
 
 .services .pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--specific-ident);
 }
 
 .services .title {
   color: var(--title-first-color);
+  margin-bottom: 44px;
+}
+
+.services-list {
+  border: 1px solid #000000;
+  padding: 30px 20px;
+}
+
+.services-list .item {
+  margin-bottom: 20px;
 }
 
 .services .text {
