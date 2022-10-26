@@ -257,7 +257,7 @@ p {
 .services-list {
   border: 1px solid #000000;
   padding: 30px 20px;
-  width: calc((100% - 30px) / 2);
+  width: calc((100% - 60px) / 2);
   margin-right: 30px;
   margin-bottom: 44px;
 }
@@ -343,7 +343,7 @@ p {
 }
 
 .barber-list .item {
-  flex-basis: calc((100% - 30px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
 }
 
@@ -380,6 +380,6 @@ p {
 }
 
 .gallery-images .img {
-  flex-basis: calc((100% - 30px) / 4);
+  flex-basis: calc((100% - 120px) / 4);
   margin-right: 30px;
 }
