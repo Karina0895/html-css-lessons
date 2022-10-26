@@ -20,13 +20,13 @@ p {
 
 .page-body {
   font-family: "Open Sans", sans-serif;
-  background-color: grey;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 }
 
 .visually-hidden {
@@ -92,6 +92,28 @@ p {
 
 .page-header {
   padding: 32px 0;
+  background-color: #9da4bd;
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 120px;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list .item:not(:first-child) {
+  margin-left: 25px;
+}
+
+.header-contacts {
+  margin-left: auto;
 }
 
 .header-link {
@@ -109,9 +131,18 @@ p {
 
 .header-button {
   color: var(--button-first-color);
+  margin-left: 35px;
 }
 
 /* Hero styles */
+
+.hero .container {
+  display: flex;
+}
+
+.hero-list {
+  width: 100px;
+}
 
 .hero .list-link {
   font-weight: 600;
@@ -131,6 +162,8 @@ p {
   padding-left: 200px;
   padding-right: 50px;
   padding-bottom: 210px;
+  background-color: #2d2c2c;
+  flex-grow: 1;
 }
 
 .hero .pre-title {
@@ -160,6 +193,11 @@ p {
   padding: 120px 0;
 }
 
+.about .container {
+  display: flex;
+  align-items: flex-start;
+}
+
 .about .pre-title {
   color: var(--main-color);
   margin-bottom: var(--specific-ident);
@@ -178,6 +216,10 @@ p {
   margin-bottom: var(--specific-ident);
 }
 
+.about-img {
+  margin-right: 30px;
+}
+
 .about-text {
   font-size: 14px;
   line-height: calc(26 / 14);
@@ -192,6 +234,11 @@ p {
 
 /* Services styles */
 
+.services {
+  background-color: rgb(46, 41, 41);
+  padding: 120px 0;
+}
+
 .services .pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--specific-ident);
@@ -202,13 +249,26 @@ p {
   margin-bottom: 44px;
 }
 
+.services .our-price {
+  display: flex;
+  margin-right: -30px;
+}
+
 .services-list {
   border: 1px solid #000000;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+  margin-right: 30px;
+  margin-bottom: 44px;
+}
+
+.services-list .item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .services-list .item {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .services .text {
@@ -220,6 +280,8 @@ p {
 
 .services-button {
   color: var(--button-first-color);
+  display: block;
+  margin: auto;
 }
 
 /* Benefits styles */
@@ -263,12 +325,26 @@ p {
 
 /* Barbers styles */
 
+.barbers {
+  padding: 120px 0;
+}
+
 .barbers .pre-title {
   color: var(--main-color);
 }
 
 .barbers .title {
   color: var(--title-second-color);
+}
+
+.barber-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.barber-list .item {
+  flex-basis: calc((100% - 30px) / 3);
+  margin-left: 30px;
 }
 
 .barber-name {
@@ -289,6 +365,21 @@ p {
 
 /* Gallery styles */
 
+.gallery {
+  padding: 120px 0;
+}
+
 .gallery .pre-title {
   color: var(--main-color);
+  margin-bottom: 44px;
+}
+
+.gallery-images {
+  display: flex;
+  margin-right: -30px;
+}
+
+.gallery-images .img {
+  flex-basis: calc((100% - 30px) / 4);
+  margin-right: 30px;
 }
