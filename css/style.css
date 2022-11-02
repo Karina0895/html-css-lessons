@@ -88,6 +88,16 @@ p {
   text-transform: var(--pre-title-case);
 }
 
+.pre-title::before {
+  content: " ";
+  display: inline-block;
+  height: 1px;
+  width: 60px;
+  background-color: var(--main-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
 /* Header styles */
 
 .page-header {
@@ -163,12 +173,23 @@ p {
   padding-right: 50px;
   padding-bottom: 210px;
   background-color: #2d2c2c;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../img/hero-description-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   flex-grow: 1;
 }
 
 .hero .pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--specific-ident);
+}
+
+.hero .pre-title::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .hero .title {
@@ -235,7 +256,11 @@ p {
 /* Services styles */
 
 .services {
-  background-color: rgb(46, 41, 41);
+  background-color: rgb(17, 19, 25);
+  background-image: url(../img/services-bg.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 120px 0;
 }
 
@@ -255,11 +280,18 @@ p {
 }
 
 .services-list {
-  border: 1px solid #000000;
   padding: 30px 20px;
   width: calc((100% - 60px) / 2);
   margin-right: 30px;
   margin-bottom: 44px;
+}
+
+.services-first {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-second {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .services-list .item:not(:last-child) {
@@ -285,6 +317,11 @@ p {
 }
 
 /* Benefits styles */
+
+.benefits-list .item {
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
+}
 
 .benefits-list .number {
   font-weight: 700;
@@ -327,6 +364,7 @@ p {
 
 .barbers {
   padding: 120px 0;
+  background-color: #f7f7f7;
 }
 
 .barbers .pre-title {
@@ -382,4 +420,20 @@ p {
 .gallery-images .img {
   flex-basis: calc((100% - 120px) / 4);
   margin-right: 30px;
+}
+
+/* Booking Contacts */
+
+.booking-contacts {
+  background-color: #191c26;
+  display: flex;
+  justify-content: space-between;
+  height: 634px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.booking-contacts .contacts {
+  width: 50%;
+  background-image: url(../img/contacts-bg.png);
 }
