@@ -317,10 +317,37 @@ p {
 }
 
 /* Benefits styles */
+.benefits-container {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 130px;
+}
+
+.benefits-description {
+  max-width: 550px;
+}
 
 .benefits-list .item {
   background-color: #f7f7f7;
-  margin-bottom: 30px;
+  width: 170px;
+  height: 133px;
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.benefits-list .item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-list .item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .benefits-list .number {
@@ -385,6 +412,42 @@ p {
   margin-left: 30px;
 }
 
+.barber-list .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.barber-list .social-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.barber-list .social-item:last-child {
+  margin-right: 0;
+}
+
+.barber-list .social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--main-color);
+}
+
+.barber-list .social-icon {
+  fill: currentColor;
+}
+
+.barber-list .social-link:hover,
+.barber-list .social-link:focus {
+  color: var(--accent-color);
+}
+
 .barber-name {
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -436,4 +499,44 @@ p {
 .booking-contacts .contacts {
   width: 50%;
   background-image: url(../img/contacts-bg.png);
+}
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
+}
+
+.contacts .title {
+  color: var(--title-first-color);
+  margin-bottom: 40px;
+}
+
+.contacts .contact-address {
+  font-style: normal;
+}
+
+.contacts .address-item {
+  margin-bottom: 20px;
+}
+
+.contacts .address-link {
+  display: flex;
+  align-items: center;
+  color: #9da4bd;
+}
+
+.contacts .address-link:hover {
+  color: var(--accent-color);
+}
+
+.contacts .icon {
+  margin-right: 16px;
+  fill: none;
+  stroke: currentColor;
+}
+
+.contacts .address-link:hover,
+.contacts .address-link:focus {
+  color: var(--accent-color);
 }
