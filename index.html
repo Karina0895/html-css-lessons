@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
@@ -46,7 +50,7 @@
           <a class="header-tel header-link link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-button button" type="button">
+          <button class="header-button button" type="button" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -55,26 +59,28 @@
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li class="item">
-              <a
-                class="list-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="item">
-              <a
-                class="list-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="social-wrapper">
+            <ul class="hero-list list">
+              <li class="item">
+                <a
+                  class="list-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="item">
+                <a
+                  class="list-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-description">
             <p class="pre-title">A hair salon for men in Kyiv</p>
             <h1 class="title">BarberShop</h1>
@@ -202,12 +208,18 @@
           <h2 class="title second-title">Our barbers</h2>
           <ul class="barber-list list">
             <li class="item">
-              <img
-                class="barber-img"
-                src="./img/barber-john.jpg"
-                alt="barber John"
-                width="370"
-              />
+              <div class="img-wrapper">
+                <img
+                  class="barber-img"
+                  src="./img/barber-john.jpg"
+                  alt="barber John"
+                  width="370"
+                />
+                <div class="barber-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit, accusantium!
+                </div>
+              </div>
               <p class="barber-name">John Smith</p>
               <p class="barber-position">Extreme Barber</p>
               <ul class="social-icons list">
@@ -242,12 +254,18 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                class="barber-img"
-                src="./img/barber-michele.jpg"
-                alt="barber Michel"
-                width="370"
-              />
+              <div class="img-wrapper">
+                <img
+                  class="barber-img"
+                  src="./img/barber-michele.jpg"
+                  alt="barber Michel"
+                  width="370"
+                />
+                <div class="barber-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit, accusantium!
+                </div>
+              </div>
               <p class="barber-name">Michele Doe</p>
               <p class="barber-position">Extreme Barber</p>
               <ul class="social-icons list">
@@ -282,12 +300,18 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                class="barber-img"
-                src="./img/barber-alan.jpg"
-                alt="barber Alan"
-                width="370"
-              />
+              <div class="img-wrapper">
+                <img
+                  class="barber-img"
+                  src="./img/barber-alan.jpg"
+                  alt="barber Alan"
+                  width="370"
+                />
+                <div class="barber-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit, accusantium!
+                </div>
+              </div>
               <p class="barber-name">Alan Black</p>
               <p class="barber-position">Extreme Barber</p>
               <ul class="social-icons list">
@@ -423,5 +447,11 @@
         </ul>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="close-sign" data-modal-close>Х</div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
