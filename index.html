@@ -447,9 +447,95 @@
         </ul>
       </div>
     </footer>
-    <div class="modal-backdrop is-hidden" data-modal>
+    <div class="modal-backdrop" data-modal>
       <div class="modal">
         <div class="close-sign" data-modal-close>Х</div>
+        <form name="form-buy" class="modal-form">
+          <div class="input-line">
+            <label>
+              <span class="label-span">Name</span>
+              <input
+                name="user-name"
+                type="text"
+                placeholder="Enter Name"
+                class="modal-input"
+                required
+              />
+            </label>
+          </div>
+          <div class="input-line">
+            <label for="user-tel" class="modal-label">Phone</label>
+            <input
+              name="user-tel"
+              id="user-tel"
+              type="tel"
+              class="modal-input"
+              title="+38 (---) -- -- ---"
+              value="+380"
+              required
+            />
+          </div>
+          <div class="input-line">
+            <label for="user-mail" class="modal-label">Email</label>
+            <input
+              name="user-mail"
+              id="user-mail"
+              type="email"
+              class="modal-input"
+              placeholder="Enter Email"
+            />
+          </div>
+          <textarea name="user-text" id="user-text" class="modal-textarea">
+I think you need to improve</textarea
+          >
+          <fieldset class="sizes-radio">
+            <legend>Sizes</legend>
+            <label for="radio-s">Size S</label>
+            <input
+              value="s"
+              id="radio-s"
+              name="size-radio"
+              type="radio"
+              checked
+            />
+            <label for="radio-m">Size M</label>
+            <input value="m" id="radio-m" name="size-radio" type="radio" />
+            <label for="radio-l">Size L</label>
+            <input value="l" id="radio-l" name="size-radio" type="radio" />
+          </fieldset>
+          <fieldset class="sizes-checkbox">
+            <legend>Sizes</legend>
+            <label for="checkbox-s">Size S</label>
+            <input
+              id="checkbox-s"
+              value="s"
+              name="size-checkbox"
+              type="checkbox"
+              checked
+            />
+            <label for="checkbox-m">Size M</label>
+            <input
+              id="checkbox-m"
+              value="m"
+              name="size-checkbox"
+              type="checkbox"
+            />
+            <label for="checkbox-l">Size L</label>
+            <input
+              id="checkbox-l"
+              value="l"
+              name="size-checkbox"
+              type="checkbox"
+            />
+          </fieldset>
+          <label for="cities" class="modal-label">City</label>
+          <select name="cities" id="cities" class="select-cities">
+            <option value="LV">Lviv</option>
+            <option value="KA">Kharkiv</option>
+            <option value="PLT" selected>Poltava</option>
+          </select>
+          <button type="submit" class="button">Submit</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

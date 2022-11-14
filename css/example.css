@@ -1,0 +1,98 @@
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+  margin: 10px 0;
+}
+
+.wrapper {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+}
+
+.box.translate {
+  background-color: red;
+  transition-property: display;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.11, 1.02, 0.55, 0.77);
+}
+
+.box.visibility {
+  background-color: red;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: linear;
+}
+
+.wrapper:hover .box.visibility {
+  /* transform: translate(50%, 100%); */
+  /* display: none; */
+  opacity: 0.5;
+}
+
+.box.rotate {
+  background-color: aqua;
+  /* transform: rotate(140deg); */
+  /* transform-origin: right top; */
+}
+
+.box.scale {
+  background-color: blue;
+  /* transform: scale(3) translate(50%, 50%); */
+}
+
+.box.skew {
+  background-color: yellow;
+  transform: skew(50deg, 180deg);
+}
+
+.wrapper-animate {
+  width: 800px;
+  height: 500px;
+  border: 1px solid grey;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation-name: rotator;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  */
+  margin: 25% auto;
+  animation: rotateX 1500ms infinite alternate ease-in-out;
+}
+
+.block:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateX {
+  0% {
+    transform: perspective(500px) rotateX(0deg);
+  }
+
+  100% {
+    transform: perspective(500px) rotateX(60deg);
+  }
+}
