@@ -573,6 +573,7 @@ p {
 .booking-form {
   display: flex;
   flex-wrap: wrap;
+  width: 570px;
 }
 
 .booking-form input {
