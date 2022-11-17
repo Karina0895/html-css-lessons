@@ -382,7 +382,29 @@
       </section>
       <section class="booking-contacts">
         <section class="booking">
-          <h2>Online-booking</h2>
+          <h2 class="title second-title">Online-booking</h2>
+          <form name="booking-form" class="booking-form">
+            <input
+              type="text"
+              name="name-input"
+              class="name-input"
+              placeholder="Name*"
+            />
+            <input
+              type="tel"
+              name="tel-input"
+              class="tel-input"
+              placeholder="Phone*"
+            />
+            <div class="textarea-wrapper">
+              <textarea
+                name="booking-text"
+                id="booking-text"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="button">send</button>
+          </form>
         </section>
         <section class="contacts">
           <h2 class="title second-title">Contacts</h2>
@@ -447,13 +469,13 @@
         </ul>
       </div>
     </footer>
-    <div class="modal-backdrop" data-modal>
+    <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="close-sign" data-modal-close>Х</div>
         <form name="form-buy" class="modal-form">
           <div class="input-line">
-            <label>
-              <span class="label-span">Name</span>
+            <label for="user-name" class="modal-label">Name</label>
+            <div class="input-wrapper">
               <input
                 name="user-name"
                 type="text"
@@ -461,7 +483,10 @@
                 class="modal-input"
                 required
               />
-            </label>
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <div class="input-line">
             <label for="user-tel" class="modal-label">Phone</label>
@@ -488,52 +513,23 @@
           <textarea name="user-text" id="user-text" class="modal-textarea">
 I think you need to improve</textarea
           >
-          <fieldset class="sizes-radio">
-            <legend>Sizes</legend>
-            <label for="radio-s">Size S</label>
+          <div class="input-line check-line">
             <input
-              value="s"
-              id="radio-s"
-              name="size-radio"
-              type="radio"
-              checked
-            />
-            <label for="radio-m">Size M</label>
-            <input value="m" id="radio-m" name="size-radio" type="radio" />
-            <label for="radio-l">Size L</label>
-            <input value="l" id="radio-l" name="size-radio" type="radio" />
-          </fieldset>
-          <fieldset class="sizes-checkbox">
-            <legend>Sizes</legend>
-            <label for="checkbox-s">Size S</label>
-            <input
-              id="checkbox-s"
-              value="s"
-              name="size-checkbox"
+              id="checkbox-agree"
+              value="agree"
+              name="checkbox-agree"
               type="checkbox"
-              checked
+              class="visually-hidden"
             />
-            <label for="checkbox-m">Size M</label>
-            <input
-              id="checkbox-m"
-              value="m"
-              name="size-checkbox"
-              type="checkbox"
-            />
-            <label for="checkbox-l">Size L</label>
-            <input
-              id="checkbox-l"
-              value="l"
-              name="size-checkbox"
-              type="checkbox"
-            />
-          </fieldset>
-          <label for="cities" class="modal-label">City</label>
-          <select name="cities" id="cities" class="select-cities">
-            <option value="LV">Lviv</option>
-            <option value="KA">Kharkiv</option>
-            <option value="PLT" selected>Poltava</option>
-          </select>
+            <label for="checkbox-agree" class="checkbox-agree">
+              <span class="icon-wrapper">
+                <svg class="agree-icon" width="13" height="9">
+                  <use href="./img/icons.svg#icon-check-mark"></use>
+                </svg>
+              </span>
+              Погоджуюся з правилами</label
+            >
+          </div>
           <button type="submit" class="button">Submit</button>
         </form>
       </div>

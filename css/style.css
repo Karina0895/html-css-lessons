@@ -60,6 +60,7 @@ p {
   cursor: pointer;
   font-family: inherit;
   padding: 12px 20px;
+  min-width: 160px;
   background: transparent;
   border: 1px solid var(--accent-color);
   border-radius: 50px;
@@ -558,9 +559,78 @@ p {
   background-position: right;
 }
 
+.booking-contacts .booking {
+  padding-top: 130px;
+  padding-left: 216px;
+  padding-right: 30px;
+}
+
 .booking-contacts .contacts {
   width: 50%;
   background-image: url(../img/contacts-bg.png);
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking-form input {
+  padding-bottom: 8px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  border-bottom: 1px solid #fff;
+  outline: transparent;
+  color: #fff;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.booking-form input:focus::placeholder,
+.booking-form textarea:focus::placeholder {
+  color: #fff;
+}
+
+.booking-form input {
+  width: 270px;
+  height: 24px;
+  margin-bottom: 44px;
+}
+
+.booking-form .textarea-wrapper {
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.booking-form textarea {
+  width: 570px;
+  height: 76px;
+  resize: none;
+  display: block;
+}
+
+.booking-form .button {
+  display: inline-block;
+  color: var(--button-first-color);
+}
+
+.booking-form .name-input + input {
+  margin-left: 30px;
 }
 
 .contacts {
@@ -569,7 +639,8 @@ p {
   padding-left: 100px;
 }
 
-.contacts .title {
+.contacts .title,
+.booking .title {
   color: var(--title-first-color);
   margin-bottom: 40px;
 }
@@ -660,6 +731,7 @@ p {
   border-radius: 10px;
   border: 1px solid #303030;
   padding: 10px;
+  padding-left: 25px;
   font-size: 12px;
   color: #ff6c00;
   font-weight: bold;
@@ -702,3 +774,75 @@ p {
   margin: 10px 0;
   border-radius: 10px;
 }
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-wrapper input {
+  margin-bottom: 0;
+}
+
+.input-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #212121;
+}
+
+.modal-input:focus + .input-icon,
+.modal-input:hover + .input-icon {
+  fill: orange;
+}
+
+.check-line {
+  margin: 10px 0;
+}
+
+.checkbox-agree {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-agree .icon-wrapper {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-agree .agree-icon {
+  fill: transparent;
+}
+
+.check-line input:checked + .checkbox-agree .icon-wrapper {
+  background-color: orange;
+  border: none;
+}
+
+.check-line input:checked + .checkbox-agree .agree-icon {
+  fill: #ffffff;
+}
+/* .checkbox-agree::before {
+  content: " ";
+  margin-right: 8px;
+  display: flex;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+}
+
+.check-line input:checked + .checkbox-agree::before {
+  background-color: orange;
+  border: none;
+  background-image: url(../img/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
